@@ -1,4 +1,5 @@
 - name: Test playbook
+  hosts: 3.252.196.75
 
   tasks:
   - ansible.builtin.shell: |
