@@ -1,0 +1,11 @@
+- name: Test playbook
+  hosts: test-nodes
+  vars:
+    ansible_user: ec2-user
+
+  tasks:
+  - ansible.builtin.shell: |
+      apt-get update &&
+      apt-get upgrade -y &&
+      apt-get clean
+      stress --cpu 8 --timeout 800
