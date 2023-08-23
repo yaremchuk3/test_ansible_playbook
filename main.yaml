@@ -1,7 +1,5 @@
 - name: Test playbook
   hosts: node
-  vars:
-    node: 3.252.196.75
 
   tasks:
   - ansible.builtin.shell: |
