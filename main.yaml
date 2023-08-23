@@ -1,7 +1,5 @@
 - name: Test playbook
-  hosts: test-nodes
-  vars:
-    ansible_user: ec2-user
+  hosts: node
 
   tasks:
   - ansible.builtin.shell: |
