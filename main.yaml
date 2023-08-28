@@ -5,5 +5,5 @@
   - ansible.builtin.shell: |
       yum update &&
       yum upgrade -y &&
-      yum install stress &&
+      yum install stress -y &&
       stress --cpu 8 --timeout {{ timeout }}
