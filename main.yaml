@@ -3,7 +3,7 @@
 
   tasks:
   - ansible.builtin.shell: |
-      yum update &&
-      yum upgrade -y &&
-      yum install stress -y &&
+      sudo yum update &&
+      sudo yum upgrade -y &&
+      sudo yum install stress -y &&
       stress --cpu 8 --timeout {{ timeout }}
