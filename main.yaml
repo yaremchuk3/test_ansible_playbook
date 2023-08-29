@@ -2,8 +2,11 @@
   hosts: all
 
   tasks:
-  - ansible.builtin.shell: |
-      sudo yum update &&
-      sudo yum upgrade -y &&
-      sudo yum install stress -y &&
-      stress --cpu 8 --timeout {{ timeout }}
+  - ansible.builtin.pause:
+      minutes: {{ timeout }}
+  
+  # - ansible.builtin.shell: |
+  #     sudo yum update &&
+  #     sudo yum upgrade -y &&
+  #     sudo yum install stress -y &&
+  #     stress --cpu 8 --timeout {{ timeout }}
