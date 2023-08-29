@@ -4,7 +4,7 @@
   tasks:
   - name: Pause task
     ansible.builtin.pause:
-      minutes: {{ timeout }}
+      minutes: 1440
   
   # - ansible.builtin.shell: |
   #     sudo yum update &&
