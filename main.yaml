@@ -2,7 +2,8 @@
   hosts: all
 
   tasks:
-  - ansible.builtin.pause:
+  - name: Pause task
+    ansible.builtin.pause:
       minutes: {{ timeout }}
   
   # - ansible.builtin.shell: |
